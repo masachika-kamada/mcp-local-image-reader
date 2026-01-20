@@ -1,6 +1,6 @@
 [project]
 name = "mcp-local-image-reader"
-version = "0.1.0"
+version = "0.1.1"
 description = "A simple MCP server that reads local images and returns them as ImageContent for LLM vision analysis"
 readme = "README.md"
 license = "MIT"
@@ -24,12 +24,12 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/masachika-kamada/mcp-image-reader"
-Repository = "https://github.com/masachika-kamada/mcp-image-reader"
-Issues = "https://github.com/masachika-kamada/mcp-image-reader/issues"
+Homepage = "https://github.com/masachika-kamada/mcp-local-image-reader"
+Repository = "https://github.com/masachika-kamada/mcp-local-image-reader"
+Issues = "https://github.com/masachika-kamada/mcp-local-image-reader/issues"
 
 [project.scripts]
-mcp-image-reader = "server:main"
+mcp-local-image-reader = "server:main"
 
 [build-system]
 requires = ["hatchling"]

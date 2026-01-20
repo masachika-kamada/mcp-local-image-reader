@@ -1,11 +1,11 @@
-# MCP Image Reader
+# MCP Local Image Reader
 
 [![PyPI version](https://badge.fury.io/py/mcp-local-image-reader.svg)](https://badge.fury.io/py/mcp-local-image-reader)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A simple [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that reads local images and returns them as `ImageContent` for LLM vision analysis.
 
-<a href="vscode:mcp/install?%7B%22name%22%3A%22local-image-reader%22%2C%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22mcp-local-image-reader%22%5D%7D"><img src="https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Install in VS Code"></a>
+[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522local-image-reader%2522%252C%2522command%2522%253A%2522uvx%2522%252C%2522args%2522%253A%255B%2522mcp-local-image-reader%2522%255D%257D)
 
 ## Features
 
@@ -31,7 +31,10 @@ Click the button above, or manually add to your VS Code settings:
     "servers": {
       "local-image-reader": {
         "command": "uvx",
-        "args": ["mcp-local-image-reader==0.1.0"]
+        "args": ["mcp-local-image-reader==0.1.1"],
+        "env": {
+          "UV_LINK_MODE": "copy"
+        }
       }
     }
   }
@@ -45,12 +48,17 @@ Click the button above, or manually add to your VS Code settings:
     "servers": {
       "local-image-reader": {
         "command": "uvx",
-        "args": ["mcp-local-image-reader"]
+        "args": ["mcp-local-image-reader"],
+        "env": {
+          "UV_LINK_MODE": "copy"
+        }
       }
     }
   }
 }
 ```
+
+> **Note:** The `UV_LINK_MODE=copy` environment variable is required on Windows when using OneDrive or other cloud-synced folders.
 
 ### Claude Desktop
 
@@ -61,7 +69,10 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "local-image-reader": {
       "command": "uvx",
-      "args": ["mcp-local-image-reader==0.1.0"]
+      "args": ["mcp-local-image-reader==0.1.1"],
+      "env": {
+        "UV_LINK_MODE": "copy"
+      }
     }
   }
 }
@@ -84,7 +95,7 @@ The assistant will use the `read_image` tool to load the image and analyze it.
 For production use, always pin to a specific version:
 
 ```json
-"args": ["mcp-local-image-reader==0.1.0"]
+"args": ["mcp-local-image-reader==0.1.1"]
 ```
 
 This ensures you won't automatically pull potentially malicious updates.
@@ -137,8 +148,8 @@ Reads an image from the filesystem and returns it as base64-encoded `ImageConten
 
 ```bash
 # Clone the repository
-git clone https://github.com/masachika-kamada/mcp-image-reader.git
-cd mcp-image-reader
+git clone https://github.com/masachika-kamada/mcp-local-image-reader.git
+cd mcp-local-image-reader
 
 # Install dependencies
 uv sync
