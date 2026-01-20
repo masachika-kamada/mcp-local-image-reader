@@ -1,11 +1,11 @@
 # MCP Image Reader
 
-[![PyPI version](https://badge.fury.io/py/mcp-image-reader.svg)](https://badge.fury.io/py/mcp-image-reader)
+[![PyPI version](https://badge.fury.io/py/mcp-local-image-reader.svg)](https://badge.fury.io/py/mcp-local-image-reader)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A simple [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that reads local images and returns them as `ImageContent` for LLM vision analysis.
 
-<a href="vscode:mcp/install?%7B%22name%22%3A%22image-reader%22%2C%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22mcp-image-reader%22%5D%7D"><img src="https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Install in VS Code"></a>
+<a href="vscode:mcp/install?%7B%22name%22%3A%22local-image-reader%22%2C%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22mcp-local-image-reader%22%5D%7D"><img src="https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Install in VS Code"></a>
 
 ## Features
 
@@ -29,9 +29,9 @@ Click the button above, or manually add to your VS Code settings:
 {
   "mcp": {
     "servers": {
-      "image-reader": {
+      "local-image-reader": {
         "command": "uvx",
-        "args": ["mcp-image-reader==0.1.0"]
+        "args": ["mcp-local-image-reader==0.1.0"]
       }
     }
   }
@@ -43,9 +43,9 @@ Click the button above, or manually add to your VS Code settings:
 {
   "mcp": {
     "servers": {
-      "image-reader": {
+      "local-image-reader": {
         "command": "uvx",
-        "args": ["mcp-image-reader"]
+        "args": ["mcp-local-image-reader"]
       }
     }
   }
@@ -59,9 +59,9 @@ Add to your `claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
-    "image-reader": {
+    "local-image-reader": {
       "command": "uvx",
-      "args": ["mcp-image-reader==0.1.0"]
+      "args": ["mcp-local-image-reader==0.1.0"]
     }
   }
 }
@@ -84,7 +84,7 @@ The assistant will use the `read_image` tool to load the image and analyze it.
 For production use, always pin to a specific version:
 
 ```json
-"args": ["mcp-image-reader==0.1.0"]
+"args": ["mcp-local-image-reader==0.1.0"]
 ```
 
 This ensures you won't automatically pull potentially malicious updates.

@@ -1,5 +1,5 @@
 [project]
-name = "mcp-image-reader"
+name = "mcp-local-image-reader"
 version = "0.1.0"
 description = "A simple MCP server that reads local images and returns them as ImageContent for LLM vision analysis"
 readme = "README.md"
