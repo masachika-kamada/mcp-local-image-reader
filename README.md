@@ -5,7 +5,8 @@
 
 A simple [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that reads local images and returns them as `ImageContent` for LLM vision analysis.
 
-[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522local-image-reader%2522%252C%2522command%2522%253A%2522uvx%2522%252C%2522args%2522%253A%255B%2522mcp-local-image-reader%2522%255D%257D)
+[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%7b%22name%22%3a%22local-image-reader%22%2c%22command%22%3a%22uvx%22%2c%22args%22%3a%5b%22mcp-local-image-reader%22%5d%2c%22env%22%3a%7b%22UV_LINK_MODE%22%3a%22copy%22%7d%7d)
+[![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Install_Server-24bfa5?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Amcp%2Finstall%3F%7b%22name%22%3a%22local-image-reader%22%2c%22command%22%3a%22uvx%22%2c%22args%22%3a%5b%22mcp-local-image-reader%22%5d%2c%22env%22%3a%7b%22UV_LINK_MODE%22%3a%22copy%22%7d%7d)
 
 ## Features
 
